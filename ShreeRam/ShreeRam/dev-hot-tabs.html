@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sir</title>
+  <script src="./Lib/jq/jquery.js"></script>
+  <script src="./www/Lib/electron/hot-tabs-lib.js"></script>
+</head>
+<body style="margin:0">
+
+  <div id="app-div"> </div>
+
+  <tab-group new-tab-button="true" sortable="true">
+    <style>
+      .my-badge {
+        background-color: #327BB1;
+      }
+      .my-custom-tab {
+        color: #d135d1;
+        font-style: italic;
+        font-weight: bold;
+      }
+    </style>
+  </tab-group>
+
+  <script>
+    const tabGroup = document.querySelector("tab-group");
+    tabGroup.on("ready", () => console.info("TabGroup is ready"));
+
+    tabGroup.addTab({
+      title: "a1",
+      src: "https://www.npmjs.com/package/electron-tabs",
+      badge: {
+        text: "5",
+        classname: "my-badge"
+      }
+    });
+
+    tabGroup.addTab({
+      title: "a2",
+      src: "https://github.com/brrd/electron-tabs",
+      // iconURL: "mark-github.svg",
+      active: true
+    });
+
+    tabGroup.addTab({
+      title: "a3",
+      src: "page.html",
+      ready: function (tab) {
+        tab.element.classList.add("my-custom-tab");
+      }
+    });
+console.log(jQuery);
+  </script>
+</body>
+
+</html>

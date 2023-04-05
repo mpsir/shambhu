@@ -1,0 +1,44 @@
+{
+  "name": "@ulissesferreira/app",
+  "version": "0.4.1",
+  "description": "🌙 A lightweight Vue 3 component library",
+  "repository": "https://github.com/ulissesferreira/moon.git",
+  "author": "Ulisses Ferreira <ulisses@hey.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/moon.umd.js",
+  "module": "./dist/moon.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/moon.es.js",
+      "require": "./dist/moon.umd.js"
+    }
+  },
+  "unpkg": "./dist/moon.umd.js",
+  "jsdelivr": "./dist/moon.umd.js",
+  "scripts": {
+    "start2":"vite build --watch",
+    "start":"vite build --watch --emptyOutDir",
+    "start1":"vite build"
+  },
+  "peerDependencies": {
+    "vue": "^3.1.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.5",
+    "@vue/compiler-sfc": "^3.1.5",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^7.14.0",
+    "prettier": "^2.3.2",
+    "rollup-plugin-visualizer": "^5.5.2",
+    "vite": "^2.4.3"
+  },
+  "dependencies": {
+    "mitt": "^3.0.0",
+    "tabbable": "^5.2.0",
+    "tippy.js": "^6.3.1"
+  }
+}

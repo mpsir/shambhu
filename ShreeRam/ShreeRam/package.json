@@ -1,0 +1,30 @@
+{
+  "name": "sir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev-hot-tabs": "electron ./dev-hot-tabs.js",
+    "dev-hot-no-tabs": "electron ./dev-hot-no-tabs.js",
+    "dev-main": "electron ./dev-main.js",
+    "dev-tabs": "electron ./dev-tabs.js",
+    "dev:index": "node index.js",
+    "dev:nodemon": "nodemon .index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~3.1.0",
+    "express": "^4.11.0",
+    "express-session": "^1.10.1",
+    "nodemon": "^2.0.21",
+    "session": "^0.1.0",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "electron": "^23.2.1",
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}
